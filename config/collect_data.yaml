@@ -9,7 +9,7 @@ algo:
 exp_name: ${task.suite_name} # 
 variant_name: ${task.benchmark_name}
 seed: 10000
-device: cuda:0
+device: cuda
 stage: 1
 output_prefix: ./experiments
 data_prefix: ./data

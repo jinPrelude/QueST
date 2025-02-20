@@ -22,7 +22,7 @@ rollout:
 exp_name: debug # 
 variant_name: null
 seed: 10000
-device: cuda:0
+device: cuda
 stage: 1 # 0 - pretrain autoencoder, 1 - train multitask, 2 - finetune multitask
 output_prefix: ./experiments
 data_prefix: ./data
