@@ -5,4 +5,4 @@ defaults:
 benchmark_name: ML45
 mode: train
 n_tasks: 50
-rollouts_per_env: 100
+demos_per_env: 100
