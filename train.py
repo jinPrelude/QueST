@@ -1,4 +1,7 @@
 import os
+
+os.environ['HYDRA_FULL_ERROR']='1'
+
 import time
 import hydra
 import wandb
@@ -35,7 +38,7 @@ def main(cfg):
     optimizers = model.get_optimizers()
     schedulers = model.get_schedulers(optimizers)
 
-    scaler = torch.cuda.amp.GradScaler(enabled=train_cfg.use_amp)
+    scaler = torch.amp.GradScaler(cfg.device, enabled=train_cfg.use_amp)
 
     experiment_dir, experiment_name = utils.get_experiment_dir(cfg)
     os.makedirs(experiment_dir, exist_ok=True)
